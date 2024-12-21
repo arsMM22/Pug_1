@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Games
+    link(rel="stylesheet", href="../css/style.css")
+  body 
+    - let games = [{title:'Red Dead Redemption 2', releasedate:'26 октября 2018', image:'rdr2.jpg'},{title:'Grand theft auto V', releasedate:'17 сентября 2013', image:'gtav.jpg'},{title:'Minecraft', releasedate:'10 мая 2009', image:'minecraft.jpg'},{title:'Dota 2', releasedate:'9 июля 2013', image:'dota2.jpg'},{title:'Counter-Strike 2', releasedate:'27 сентября 2023', image:'cs2.jpg'},{title:'Fortnite', releasedate:'21 июля 2017', image:'fn.jpg'},{title:'Clash Royale', releasedate:'6 марта 2016', image:'clashr.jpg'}]
+    .container
+      h1.title Топ 7 популярных игр
+      p К вашему вниманию представлен список топ 7 игр:
+      ul.grid 
+        each game in games
+          li.grid_item
+            article.card
+              a.card_image(href="")
+                img(src=`../img/${game.image}`)
+              h2.card_title
+                a(href="")=game.title 
+              span.card_date Дата выпуска:#{game.releasedate}
