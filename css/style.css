@@ -80,8 +80,7 @@ ul{
     background-color:rgb(243, 243, 127);
     cursor: pointer;
     opacity:0.9;
-    transform:translateY(-5px);
-    
+    transform: scale(1.2);
 }
 .card:hover .card_title a{
     color:orange;
